@@ -1,0 +1,19 @@
+.footer-container {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0; // Adjusted padding for vertical spacing
+    background-color: #333; // A dark background for the footer for contrast
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); // Adds depth with a shadow
+    z-index: 1000; // Ensures the footer stays on top of other content
+  
+    .footer-header {
+      font-size: 12px;
+      color: #fff; // Ensures text is easily readable on the dark background
+      
+      margin: 0 auto; // Centers the content and removes default margin
+    }
+  }
+  

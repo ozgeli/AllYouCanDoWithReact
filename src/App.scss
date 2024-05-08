@@ -1,0 +1,51 @@
+// Import component-specific styles
+@import './components/topbar/topbar.scss';
+@import './components/form/form.scss';
+@import './components/bookingForm/bookingForm.scss';
+@import './components/counter/counter.scss';
+@import './components/footer/footer.scss';
+@import './components/wheatherApp/wheatherapp.scss';
+
+// Base layout styles
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+// Main content styling to offset for the fixed Topbar
+.main-content {
+    padding-top: 80px; // Adjust based on Topbar's height
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; // Centers the content horizontally
+    gap: 20px; // Provides space between components
+  }
+  
+  // Styles for individual component sections
+  .section {
+    flex: 1;
+    //width: 30%; // Makes components smaller and allows for side-by-side layout
+    min-width: 250px; // Ensures components do not become too small on narrow screens
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin-bottom: 20px; // Adds space between rows of components
+  }
+  // Specific style for WheatherApp section 
+  .wheatherApp-section {
+    flex: 1 1 100%;
+    min-height: 400px;;
+  }
+  
+// Responsive adjustments for very small screens
+@media (max-width: 600px) {
+  .section, .wheatherApp-section, .counter-section, .form-section, .bookingForm-section {
+    width: 90%; // Allows components to stack vertically on small screens
+    margin: 10px auto; // Centers components with automatic horizontal margins
+    flex: none; // Disables flex grow/shrink/basis adjustments for small screens
+  }
+  }
+  

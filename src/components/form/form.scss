@@ -1,0 +1,77 @@
+.form-container {
+  max-width: 400px;
+  margin: 80px auto; // Increased top and bottom margin for better visibility
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .signUp-header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px; // Added space between title and form
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; // Slightly increased gap for better spacing
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    label {
+      margin-bottom: 8px; // Slightly increased for better visual separation
+      color: #666;
+      font-weight: 500; // Slightly bolder for emphasis
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px; // Increased padding for a larger touch area
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; // Ensures padding does not affect the overall width
+      font-size: 16px; // Larger font size for readability
+
+      &:focus {
+        border-color: #0056b3;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); // Added focus shadow for better visibility
+        outline: none;
+      }
+    }
+    .input-invalid {
+      border-color: #ff3860; // Example color for invalid input
+    }
+    
+    .input-valid {
+      border-color: #23d160; // Example color for valid input
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 12px; // Increased padding for better ergonomics
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      font-size: 16px; // Increased font size for readability
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px); // Slight lift effect on hover
+      }
+
+      &:active {
+        transform: translateY(1px); // Subtle press effect
+      }
+    }
+  }
+}

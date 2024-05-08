@@ -1,0 +1,73 @@
+.container {
+  background: linear-gradient(100deg, #402, #006);
+  padding: 2em;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  flex-direction: column; // Ensure children are stacked vertically
+  position: relative; // Make the container relative for absolute positioning
+
+  .container_header {
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    position: absolute; // Position the title absolutely within the container
+    top: 0px; // Adjust this value to position the title above the input box
+    text-align: center;
+    z-index: 1; // Ensure it's above other content within the container
+    font-family: inherit;
+  }
+
+  .input-group {
+    width: 100%;
+    max-width: 100em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Center input group horizontally
+    z-index: 2;
+  }
+
+  .input-group__label {
+    padding: 0 0.5em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    letter-spacing: 0.1em;
+    color: #ccd;
+    color: rgba(255, 220, 255, 0.6);
+    cursor: pointer;
+  }
+
+  .input-group__input {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1;
+    border-style: none;
+    outline: none;
+    height: calc(1em + 1.6em + 0.5em);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.8em 1em;
+    border: 0.25em solid transparent;
+    background-image: linear-gradient(#000, #000), linear-gradient(120deg, #f09 0%, #0ff 50%, #9f0 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 1.8em;
+    background-size: 200% 100%;
+    transition: background-position 0.8s ease-out;
+    position: relative;
+    top: 0;
+    z-index: 2; // Ensure input is above the header
+  }
+
+  .container_result {
+    color: aliceblue;
+    position: relative;
+    top: 150px;
+    bottom: 100px;
+    right: 400px;
+  }
+}
